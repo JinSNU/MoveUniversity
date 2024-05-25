@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const content = document.getElementById('content');
     const passwordContainer = document.getElementById('password-container');
 
-    const correctPassword = 'yourpassword'; // 설정할 비밀번호
+    const correctPassword = '24eogkr%'; // 설정할 비밀번호
 
     passwordSubmit.addEventListener('click', () => {
         if (passwordInput.value === correctPassword) {
