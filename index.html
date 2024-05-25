@@ -9,30 +9,37 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <a href="https://moveuniversity.kr/" target="_blank">
+    <div id="password-container">
         <img src="images/company_logo.png" alt="Company Logo" id="company-logo">
-    </a>
-    <h1>지역별 기사 정보</h1>
-    <div id="map-container">
-        <!-- 지역 이미지들 -->
-        <img src="images/gyeonggi.png" alt="Gyeonggi" class="region" id="gyeonggi">
-        <img src="images/gangwon.png" alt="Gangwon" class="region" id="gangwon">
-        <img src="images/chungbuk.png" alt="Chungbuk" class="region" id="chungbuk">
-        <img src="images/chungnam.png" alt="Chungnam" class="region" id="chungnam">
-        <img src="images/jeonbuk.png" alt="Jeonbuk" class="region" id="jeonbuk">
-        <img src="images/jeonnam.png" alt="Jeonnam" class="region" id="jeonnam">
-        <img src="images/gyeongbuk.png" alt="Gyeongbuk" class="region" id="gyeongbuk">
-        <img src="images/gyeongnam.png" alt="Gyeongnam" class="region" id="gyeongnam">
-        <img src="images/jeju.png" alt="Jeju" class="region" id="jeju">
-        <img src="images/seoul.png" alt="Seoul" class="region" id="seoul">
-        <img src="images/sejong.png" alt="Sejong" class="region" id="sejong">
-        <img src="images/ulsan.png" alt="Ulsan" class="region" id="ulsan">
-        <img src="images/busan.png" alt="Busan" class="region" id="busan">
-        <img src="images/daegu.png" alt="Daegu" class="region" id="daegu">
-        <img src="images/incheon.png" alt="Incheon" class="region" id="incheon">
-        <img src="images/gwangju.png" alt="Gwangju" class="region" id="gwangju">
-        <img src="images/daejeon.png" alt="Daejeon" class="region" id="daejeon">
-        <div id="info-box"></div>
+        <input type="password" id="password-input" placeholder="비밀번호 입력">
+        <button id="password-submit">확인</button>
+    </div>
+    <div id="content" style="display:none;">
+        <a href="https://moveuniversity.kr/" target="_blank">
+            <img src="images/company_logo.png" alt="Company Logo" id="company-logo-content">
+        </a>
+        <h1>지역별 기사 정보</h1>
+        <div id="map-container">
+            <!-- 지역 이미지들 -->
+            <img src="images/gyeonggi.png" alt="Gyeonggi" class="region" id="gyeonggi">
+            <img src="images/gangwon.png" alt="Gangwon" class="region" id="gangwon">
+            <img src="images/chungbuk.png" alt="Chungbuk" class="region" id="chungbuk">
+            <img src="images/chungnam.png" alt="Chungnam" class="region" id="chungnam">
+            <img src="images/jeonbuk.png" alt="Jeonbuk" class="region" id="jeonbuk">
+            <img src="images/jeonnam.png" alt="Jeonnam" class="region" id="jeonnam">
+            <img src="images/gyeongbuk.png" alt="Gyeongbuk" class="region" id="gyeongbuk">
+            <img src="images/gyeongnam.png" alt="Gyeongnam" class="region" id="gyeongnam">
+            <img src="images/jeju.png" alt="Jeju" class="region" id="jeju">
+            <img src="images/seoul.png" alt="Seoul" class="region" id="seoul">
+            <img src="images/sejong.png" alt="Sejong" class="region" id="sejong">
+            <img src="images/ulsan.png" alt="Ulsan" class="region" id="ulsan">
+            <img src="images/busan.png" alt="Busan" class="region" id="busan">
+            <img src="images/daegu.png" alt="Daegu" class="region" id="daegu">
+            <img src="images/incheon.png" alt="Incheon" class="region" id="incheon">
+            <img src="images/gwangju.png" alt="Gwangju" class="region" id="gwangju">
+            <img src="images/daejeon.png" alt="Daejeon" class="region" id="daejeon">
+            <div id="info-box"></div>
+        </div>
     </div>
 </body>
 </html>

@@ -3,19 +3,55 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0; /* 기본 여백 제거 */
-    padding: 0; /* 기본 여백 제거 */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    background-color: #f0f0f0;
+}
+
+#password-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#password-input {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#password-submit {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 #company-logo {
-    position: absolute;
-    top: -40px; /* 상단에서 10px 띄우기 */
-    left: 10px; /* 왼쪽에서 10px 띄우기 */
-    height: 250px; /* 로고 이미지 높이 조정 */
-    width: auto; /* 비율에 맞게 너비 자동 조정 */
-    z-index: 1001; /* 다른 요소 위에 표시되도록 z-index 조정 */
+    height: 250px;
+    width: auto;
 }
 
+#content {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#company-logo-content {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    height: 250px;
+    width: auto;
+    z-index: 1001;
+}
+
+/* 기존 스타일 유지 */
 #map-container {
     position: relative;
     width: 1000px;
@@ -46,7 +82,7 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     display: none;
     z-index: 1000;
-    overflow-y: auto; /* 스크롤 기능 추가 */
+    overflow-y: auto;
 }
 
 #close-btn {
@@ -85,7 +121,7 @@ body {
 }
 
 .article {
-    display: contents; /* 그리드 안에서 각 필드가 같은 줄에 위치하도록 */
+    display: contents; 
 }
 
 .article-field {
@@ -97,44 +133,44 @@ body {
 
 /* 이사 종류에 따른 색상 */
 .express .article-field {
-    background-color: #a2d6eb; /* 파란색 */
+    background-color: #a2d6eb; 
 }
 
 .wanpo .article-field {
-    background-color: #ffd17a; /* 주황색 */
+    background-color: #ffd17a; 
 }
 
 .packing .article-field {
-    background-color: #daa2ff; /* 빨간색 */
+    background-color: #daa2ff; 
 }
 
 .semi-packing .article-field {
-    background-color: #c8ffe1; /* 노란색 */
+    background-color: #c8ffe1; 
 }
 
 .general .article-field {
-    background-color: #D3D3D3; /* 회색 */
+    background-color: #D3D3D3; 
 }
 
 /* 등급에 따른 색상 */
 .grade-s .article-field:nth-child(8) {
-    background-color: #ff7e7e !important; /* 빨간색 */
+    background-color: #ff7e7e !important; 
 }
 
 .grade-a .article-field:nth-child(8) {
-    background-color: #ffff78 !important; /* 노란색 */
+    background-color: #ffff78 !important; 
 }
 
 .grade-b .article-field:nth-child(8) {
-    background-color: #ffd152 !important; /* 초록색 */
+    background-color: #ffd152 !important; 
 }
 
 .grade-c .article-field:nth-child(8) {
-    background-color: #4f60ff !important; /* 파란색 */
+    background-color: #4f60ff !important; 
 }
 
 .grade-d .article-field:nth-child(8) {
-    background-color: #5e5e5e !important; /* 회색 */
+    background-color: #5e5e5e !important; 
 }
 
 /* 팝업 스타일 */

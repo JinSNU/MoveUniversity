@@ -1,6 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
     const infoBox = document.getElementById('info-box');
-    let currentMemoPopup = null; // 현재 열린 팝업을 추적
+    const passwordInput = document.getElementById('password-input');
+    const passwordSubmit = document.getElementById('password-submit');
+    const content = document.getElementById('content');
+    const passwordContainer = document.getElementById('password-container');
+
+    passwordSubmit.addEventListener('click', () => {
+        const password = passwordInput.value;
+        fetch('check_password.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: `password=${password}`
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                passwordContainer.style.display = 'none';
+                content.style.display = 'flex';
+            } else {
+                alert('비밀번호가 틀렸습니다.');
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    });
+
+    let currentMemoPopup = null;
 
     const gradePriority = {
         'S': 1,
