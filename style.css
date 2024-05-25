@@ -43,26 +43,40 @@ body {
 }
 
 #company-logo-content {
-    position: absolute;
-    top: -40px;
+    position: fixed;
+    top: -60px;
     left: 10px;
-    height: 250px;
+    height: 300px;
     width: auto;
-    z-index: 1001;
+    z-index: 1000;
 }
 
 /* 기존 스타일 유지 */
 #map-container {
     position: relative;
+    top: 100px;
     width: 1000px;
     height: 1000px;
+}
+
+/* 지도 전체 위에 나타나는 텍스트 스타일 */
+#map-container::before {
+    content: "지역별 기사 정보";
+    position: absolute;
+    top: -50px;
+    left: 48%;
+    transform: translateX(-50%);
+    font-size: 35px;
+    font-weight: bold;
+    color: black;
+    z-index: 1001;
 }
 
 .region {
     position: absolute;
     cursor: pointer;
     transition: filter 0.3s;
-}   
+}
 
 .region:hover {
     filter: brightness(1.2);
@@ -121,7 +135,7 @@ body {
 }
 
 .article {
-    display: contents; 
+    display: contents;
 }
 
 .article-field {
@@ -133,44 +147,44 @@ body {
 
 /* 이사 종류에 따른 색상 */
 .express .article-field {
-    background-color: #a2d6eb; 
+    background-color: #a2d6eb;
 }
 
 .wanpo .article-field {
-    background-color: #ffd17a; 
+    background-color: #ffd17a;
 }
 
 .packing .article-field {
-    background-color: #daa2ff; 
+    background-color: #daa2ff;
 }
 
 .semi-packing .article-field {
-    background-color: #c8ffe1; 
+    background-color: #c8ffe1;
 }
 
 .general .article-field {
-    background-color: #D3D3D3; 
+    background-color: #D3D3D3;
 }
 
 /* 등급에 따른 색상 */
 .grade-s .article-field:nth-child(8) {
-    background-color: #ff7e7e !important; 
+    background-color: #ff7e7e !important;
 }
 
 .grade-a .article-field:nth-child(8) {
-    background-color: #ffff78 !important; 
+    background-color: #ffff78 !important;
 }
 
 .grade-b .article-field:nth-child(8) {
-    background-color: #ffd152 !important; 
+    background-color: #ffd152 !important;
 }
 
 .grade-c .article-field:nth-child(8) {
-    background-color: #4f60ff !important; 
+    background-color: #4f60ff !important;
 }
 
 .grade-d .article-field:nth-child(8) {
-    background-color: #5e5e5e !important; 
+    background-color: #5e5e5e !important;
 }
 
 /* 팝업 스타일 */
