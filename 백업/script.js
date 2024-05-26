@@ -1,6 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
     const infoBox = document.getElementById('info-box');
-    let currentMemoPopup = null; // 현재 열린 팝업을 추적
+    const passwordInput = document.getElementById('password-input');
+    const passwordSubmit = document.getElementById('password-submit');
+    const content = document.getElementById('content');
+    const passwordContainer = document.getElementById('password-container');
+
+    const correctPassword = '24eogkr%'; // 설정할 비밀번호
+
+    passwordSubmit.addEventListener('click', () => {
+        if (passwordInput.value === correctPassword) {
+            passwordContainer.style.display = 'none';
+            content.style.display = 'flex';
+        } else {
+            alert('비밀번호가 틀렸습니다.');
+        }
+    });
+
+    let currentMemoPopup = null;
 
     const gradePriority = {
         'S': 1,
