@@ -51,6 +51,15 @@ body {
     z-index: 1000;
 }
 
+#support-link {
+    position: absolute;
+    top: 50px;
+    right: 200px;
+    height: 150px;
+    width: auto;
+    z-index: 1000;
+}
+
 /* 기존 스타일 유지 */
 #map-container {
     position: relative;
